@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <title>同棲料金シミュレーション</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  </head>
+  <body style="min-height: 2000px;">
+
+    <header>
+      <h1 class="title">羽深暁雄　ーポートフォリオー</h1>
+      <li class="linktitle">自己紹介</li>
+      <li class="linktitle">制作物</li>
+      <li class="address">080-5960-5537<br>akio@gmail.com</li>
+    </header>
+    <!--リンク先-->>
+    <h1 class="anchor1" id="anchor1">シミュレーション結果</a>
+    <!--入力欄-->
+    <h1>同棲料金シミュレーション</h1>
+    <div class="menu">
+    <div class="firstPerson">
+    <p>一人目</p>
+    <p>名前
+    <input id="nameA" type="text" value="あきお" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>家賃
+    <input id="homeCostA" type="number" value="47000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>光熱費
+    <input id="infraCostA" type="number" value="10000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>食費
+    <input id="foodCostA" type="number" value="30000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>火災保険
+    <input id="insCostA" type="number" value="8000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    </div>
+    <div class="secondPerson">
+    <p>二人目</p>
+    <p>名前
+    <input id="nameB" type="text" value="れいな" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>家賃
+    <input id="homeCostB" type="number" value="50000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>光熱費
+    <input id="infraCostB" type="number" value="8000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>食費
+    <input id="foodCostB" type="number" value="26000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>火災保険
+    <input id="insCostB" type="number" value="10000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    </div>
+    <p>引越し後</p>
+    <p>家賃
+    <input id="homeCostC" type="number" value="80000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>引越し代
+    <input id="moveCost" type="number" value="40000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>火災保険
+    <input id="insCostC" type="number" value="12000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <p>家具代
+    <input id="furnitureCost" type="number" value="90000" name="name" required minlength="4" maxlength="8" size="10" />
+    </p>
+    <button id="button" onclick="location.href='#anchor1'">シミュレーション</button>
+    </div>
+    
+<div class="output">
+    <!--出力初期費用-->>
+    <div class="box1" id="box1">
+      <p class="boxtitle" id="boxtitle1"></p>
+      <div class="box1_1">
+        <ul class="boxul">
+          <li class="boxli" id="outMoveCost"></li>
+          <li class="boxli" id="outDeposit"></li>
+          <li class="boxli" id="outFurnitureCost"></li>
+        </ul>
+        <p class="boxresult" id="outFirstCost"></p>
+      </div>
+    </div>
+
+    <!--出力家賃-->>
+    <div class="box2" id="box2">
+      <p class="boxtitle" id="boxtitle2"></p>
+      <div class="box2_1">
+        <ul class="boxul">
+          <li class="boxli" id="outHomeCostA"></li>
+          <li class="boxli" id="outHomeCostB"></li>
+          <li class="boxli" id="outHomeCostSum"></li>
+        </ul>
+        <p class="boxresult" id="outHomeCostC"></p>
+      </div>
+    </div>
+
+    <!--出力食費-->>
+    <div class="box3" id="box3">
+      <p class="boxtitle" id="boxtitle3"></p>
+      <div class="box3_1">
+        <ul class="boxul">
+          <li class="boxli" id="outFoodCostA"></li>
+          <li class="boxli" id="outFoodCostB"></li>
+          <li class="boxli" id="outFoodCostSum"></li>
+        </ul>
+        <p class="boxresult" id="outFoodCostC"></p>
+      </div>
+    </div>
+
+    <!--出力光熱費-->>
+    <div class="box4" id="box4">
+      <p class="boxtitle" id="boxtitle4"></p>
+      <div class="box4_1">
+        <ul class="boxul">
+          <li class="boxli" id="outInfraCostA"></li>
+          <li class="boxli" id="outInfraCostB"></li>
+          <li class="boxli" id="outInfraCostSum"></li>
+        </ul>
+        <p class="boxresult" id="outInfraCostC"></p>
+      </div>
+    </div>
+
+    <!--出力火災保険-->>
+    <div class="box5" id="box5">
+      <p class="boxtitle" id="boxtitle5"></p>
+      <div class="box5_1">
+        <ul class="boxul">
+          <li class="boxli" id="outInsCostA"></li>
+          <li class="boxli" id="outInsCostB"></li>
+          <li class="boxli" id="outInsCostSum"></li>
+        </ul>
+        <p class="boxresult" id="outInsCostC"></p>
+      </div>
+    </div>
+  </div>
+
+  <!--出力まとめ-->>
+  <div class="summary" id="summary">
+    <p class="summarytitle" id="summarytitle"></p>
+    <div class="summary_1">
+      <ul class="summaryul">
+        <li class="summaryli" id="summaryHomeCost"></li>
+        <li class="summaryli" id="summaryFoodCost"></li>
+        <li class="summaryli" id="summaryInfraCost"></li>
+        <li class="summaryli" id="summaryInsCost"></li>
+        <br>
+        <li class="summaryli" id="summarySumCost"></li>
+        <li class="summaryli" id="summaryTiming"></li>
+      </ul>
+      <p class="boxresult" id="outInsCostC"></p>
+    </div>
+  </div>
+</div>
+
+
+    <div class="graph">
+    <canvas id="lineChart"></canvas>
+    </div>
+    <script src="script.js" async></script>
+
+  </body>
+</html>
+

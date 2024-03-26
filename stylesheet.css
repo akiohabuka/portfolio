@@ -1,0 +1,151 @@
+header {
+    display: flex;
+    width: 100%;
+    height: 110px;
+    background-color: #222222;
+    align-items: center;
+
+    .title {
+        margin-right: auto;
+        color: white;
+      }
+    .linktitle {
+        list-style: none;
+        display: inline-block;
+        padding: 10px;
+        color: white;
+      }
+    
+    .address{
+        color: white;
+        display: inline-block;
+        padding: 10px;
+    }
+  }
+
+  body{
+    .output{
+      position: absolute;
+      top: 1000px;
+      left: 60px;
+    }
+    .anchor1{
+      position: absolute;
+      top: 900px;
+      left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    }
+    img{
+      position: absolute;
+      right: 100px;
+      top: 300px;
+    }
+
+
+
+    h1{
+      text-align: center;
+    }
+    background-color: white;
+    .menu{
+        background-color: #E3E3E3;
+        height: 500;
+        width:  500px;
+        position: absolute;
+        top: 22%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+
+    }
+    .graph{
+        position: absolute;
+        top: 1000px;
+        right: 60px;
+    }
+
+    .box1{
+      height: auto;
+      width: 500px;
+    }
+    .box2{
+      height: auto;
+      width: 500px;
+    }
+    .box3{
+      height: auto;
+      width: 500px;
+    }
+    .box4{
+      height: auto;
+      width: 500px;
+    }
+    .box5{
+      height: auto;
+      width: 500px;
+    }
+    .box1_1{
+      display: flex;
+      height: auto;
+    }
+    .box2_1{
+      display: flex;
+      height: auto;
+    }
+    .box3_1{
+      display: flex;
+      height: auto;
+    }
+    .box4_1{
+      display: flex;
+      height: auto;
+    }
+    .box5_1{
+      display: flex;
+      height: auto;
+    }
+    .boxsum{
+
+      width: 30%;
+    }
+    .boxli{
+      list-style: none;
+    }
+    .boxul{
+      display: block;
+      padding: 0%;
+      padding-left: 10px;
+    }
+    .boxresult{
+      margin-left: auto;
+      margin-top: auto;
+      padding-right: 20px;
+      padding-bottom: 0px;
+      font-size: x-large;
+    }
+    .boxtitle{
+      padding: 3px;
+      font-size: large;
+      text-align: center;
+    }
+    .summary{
+      position: absolute;
+      top: 1480px;
+      right: 60px;
+      height: auto;
+      width: 56%;
+    }
+    .summarytitle{
+      padding: 3px;
+      font-size: large;
+      text-align: center;
+    }
+    .summaryli{
+      list-style: none;
+      text-align: center;
+    }
+    
+  }
+  
